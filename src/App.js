@@ -94,7 +94,6 @@ function App() {
         <CharInfo 
             dateChar={characters.charInfo} 
             />
-        <img className='decoration' src={decoration} alt="Vision" />
       </div>
 
       {/* <ComicsList /> */}
