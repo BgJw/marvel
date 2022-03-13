@@ -4,16 +4,12 @@ import mjolnir from '../../resources/img/mjolnir.png';
 import Spinner from '../Spinner/Spinner';
 import ErrorMesage from '../ErrorMesage/ErrorMesage';
 
-const Banner = ({ onRandom, character }) => {
-
-    const { char, loading, error } = character;
-
+const Banner = ({ onRandom, character, loading, error }) => {
 
 
     const errorMesage = error ? <ErrorMesage /> : null;
     const spinner = loading ? <Spinner /> : null;
-    const content = !(spinner || errorMesage) ? View(char) : null;
-
+    const content = !(loading || error) ? View(character.char) : null;
 
     return (
         <main className='banner'>
